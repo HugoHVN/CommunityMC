@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " I ",
+    "ICI",
+    "TAT"
+  ],
+  "key": {
+    "C": { "tag": "c:circuits/advanced" },
+    "A": { "item": "mekanism:alloy_infused" },
+    "T": { "item": "mekanism:energy_tablet" },
+    "I": { "item": "mekanism:ingot_osmium" }
+  },
+  "result": {
+    "id": "mekanismgenerators:wind_generator",
+    "count": 1
+  }
+}

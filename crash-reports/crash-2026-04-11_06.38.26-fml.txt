@@ -1,0 +1,1016 @@
+---- Minecraft Crash Report ----
+// Hey, that tickles! Hehehe!
+
+Time: 2026-04-11 06:38:26
+Description: Mod loading failures have occurred; consult the issue messages for more details
+
+net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: main
+Stacktrace:
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.common.asm.RuntimeDistCleaner.processClassWithFlags(RuntimeDistCleaner.java:60) ~[loader-4.0.42.jar%2359!/:4.0] {}
+-- Mod loading issue for: netherexp --
+Details:
+	Mod file: /data/mods/Jadens-Nether-Expansion-2.4.0-BETA.1.jar
+	Failure message: Jaden's Nether Expansion (netherexp) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.RuntimeException: Attempted to load class net/minecraft/client/particle/ParticleRenderType for invalid dist DEDICATED_SERVER
+	Mod version: 2.4.0
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.RuntimeException: Attempted to load class net/minecraft/client/particle/ParticleRenderType for invalid dist DEDICATED_SERVER
+Stacktrace:
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.common.asm.RuntimeDistCleaner.processClassWithFlags(RuntimeDistCleaner.java:60) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:94) ~[modlauncher-11.0.5.jar%2364!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-11.0.5.jar%2364!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:57) ~[modlauncher-11.0.5.jar%2364!/:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:190) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.lambda$findClass$20(ModuleClassLoader.java:298) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:311) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:298) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:214) ~[securejarhandler-3.0.8.jar:?] {}
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[?:?] {}
+	at TRANSFORMER/netherexp@2.4.0/net.jadenxgamer.netherexp.registry.JNEBlocks.lambda$static$30(JNEBlocks.java:125) ~[Jadens-Nether-Expansion-2.4.0-BETA.1.jar%23404!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: netherexp --
+Details:
+	Caused by 0: java.lang.BootstrapMethodError: java.lang.RuntimeException: Attempted to load class net/minecraft/client/particle/ParticleRenderType for invalid dist DEDICATED_SERVER
+		at TRANSFORMER/netherexp@2.4.0/net.jadenxgamer.netherexp.registry.JNEEntityType.lambda$static$0(JNEEntityType.java:26) ~[Jadens-Nether-Expansion-2.4.0-BETA.1.jar%23404!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+		at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+	Mod file: /data/mods/Jadens-Nether-Expansion-2.4.0-BETA.1.jar
+	Failure message: Jaden's Nether Expansion (netherexp) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.BootstrapMethodError: java.lang.RuntimeException: Attempted to load class net/minecraft/client/particle/ParticleRenderType for invalid dist DEDICATED_SERVER
+	Mod version: 2.4.0
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.RuntimeException: Attempted to load class net/minecraft/client/particle/ParticleRenderType for invalid dist DEDICATED_SERVER
+Stacktrace:
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.common.asm.RuntimeDistCleaner.processClassWithFlags(RuntimeDistCleaner.java:60) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:94) ~[modlauncher-11.0.5.jar%2364!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-11.0.5.jar%2364!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:57) ~[modlauncher-11.0.5.jar%2364!/:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:190) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.lambda$findClass$20(ModuleClassLoader.java:298) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:311) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:298) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:214) ~[securejarhandler-3.0.8.jar:?] {}
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[?:?] {}
+	at TRANSFORMER/netherexp@2.4.0/net.jadenxgamer.netherexp.registry.JNEEntityType.lambda$static$0(JNEEntityType.java:26) ~[Jadens-Nether-Expansion-2.4.0-BETA.1.jar%23404!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: netherexp --
+Details:
+	Mod file: /data/mods/Jadens-Nether-Expansion-2.4.0-BETA.1.jar
+	Failure message: Jaden's Nether Expansion (netherexp) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.RuntimeException: Attempted to load class net/minecraft/client/particle/ParticleRenderType for invalid dist DEDICATED_SERVER
+	Mod version: 2.4.0
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.RuntimeException: Attempted to load class net/minecraft/client/particle/ParticleRenderType for invalid dist DEDICATED_SERVER
+Stacktrace:
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.common.asm.RuntimeDistCleaner.processClassWithFlags(RuntimeDistCleaner.java:60) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:94) ~[modlauncher-11.0.5.jar%2364!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-11.0.5.jar%2364!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:57) ~[modlauncher-11.0.5.jar%2364!/:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:190) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.lambda$findClass$20(ModuleClassLoader.java:298) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:311) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:298) ~[securejarhandler-3.0.8.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:214) ~[securejarhandler-3.0.8.jar:?] {}
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[?:?] {}
+	at TRANSFORMER/netherexp@2.4.0/net.jadenxgamer.netherexp.registry.JNEItems.lambda$static$7(JNEItems.java:50) ~[Jadens-Nether-Expansion-2.4.0-BETA.1.jar%23404!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: supplementaries --
+Details:
+	Mod file: /data/mods/supplementaries-1.21-3.5.34-neoforge.jar
+	Failure message: Supplementaries (supplementaries) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.IllegalStateException: Tried to add air block/item to Block Type. Key planks. This is a Moonlight bug, please report me
+	Mod version: 1.21-3.5.34
+	Mod issues URL: https://github.com/MehVahdJukaar/supplementaries/issues
+	Exception message: java.lang.IllegalStateException: Tried to add air block/item to Block Type. Key planks. This is a Moonlight bug, please report me
+Stacktrace:
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.api.set.BlockType.addChild(BlockType.java:230) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.api.set.wood.WoodType.initializeChildrenBlocks(WoodType.java:167) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at MC-BOOTSTRAP/com.google.common@32.1.2-jre/com.google.common.collect.Maps$KeySet.lambda$forEach$0(Maps.java:4021) ~[guava-32.1.2-jre.jar%2387!/:?] {}
+	at MC-BOOTSTRAP/com.google.common@32.1.2-jre/com.google.common.collect.HashBiMap$Inverse.lambda$forEach$0(HashBiMap.java:753) ~[guava-32.1.2-jre.jar%2387!/:?] {}
+	at MC-BOOTSTRAP/com.google.common@32.1.2-jre/com.google.common.collect.HashBiMap.forEach(HashBiMap.java:583) ~[guava-32.1.2-jre.jar%2387!/:?] {}
+	at MC-BOOTSTRAP/com.google.common@32.1.2-jre/com.google.common.collect.HashBiMap$Inverse.forEach(HashBiMap.java:753) ~[guava-32.1.2-jre.jar%2387!/:?] {}
+	at MC-BOOTSTRAP/com.google.common@32.1.2-jre/com.google.common.collect.Maps$KeySet.forEach(Maps.java:4021) ~[guava-32.1.2-jre.jar%2387!/:?] {}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.api.set.BlockTypeRegistry.finalizeAndFreeze(BlockTypeRegistry.java:184) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at java.base/java.util.ArrayList.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.core.set.BlockSetInternal.initializeBlockSets(BlockSetInternal.java:48) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.core.set.neoforge.BlockSetInternalImpl.registerLateBlockAndItems(BlockSetInternalImpl.java:138) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.core.set.neoforge.BlockSetInternalImpl.lambda$getOrAddQueue$6(BlockSetInternalImpl.java:121) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: netherexp --
+Details:
+	Mod file: /data/mods/Jadens-Nether-Expansion-2.4.0-BETA.1.jar
+	Failure message: Jaden's Nether Expansion (netherexp) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block / netherexp:suspicious_soul_sand]
+	Mod version: 2.4.0
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block / netherexp:suspicious_soul_sand]
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.value(DeferredHolder.java:103) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.get(DeferredHolder.java:117) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/netherexp@2.4.0/net.jadenxgamer.netherexp.registry.JNEBlockEntityType.lambda$static$0(JNEBlockEntityType.java:20) ~[Jadens-Nether-Expansion-2.4.0-BETA.1.jar%23404!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: productivebees --
+Details:
+	Caused by 0: java.lang.ExceptionInInitializerError
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+		at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+	Mod file: /data/mods/productivebees-1.21.1-13.13.3.jar
+	Failure message: Productive Bees (productivebees) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.ExceptionInInitializerError: null
+	Mod version: 1.21.1-13.13.3
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:item / productivebees:honey_treat]
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.value(DeferredHolder.java:103) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.get(DeferredHolder.java:117) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/productivebees@1.21.1-13.13.3/cy.jdkdigital.productivebees.common.recipe.BeeSpawningRecipe$Serializer.lambda$static$4(BeeSpawningRecipe.java:96) ~[productivebees-1.21.1-13.13.3.jar%23446!/:?] {re:classloading}
+	at MC-BOOTSTRAP/datafixerupper@8.0.16/com.mojang.serialization.codecs.RecordCodecBuilder.mapCodec(RecordCodecBuilder.java:76) ~[datafixerupper-8.0.16.jar%23100!/:?] {re:mixin}
+	at TRANSFORMER/productivebees@1.21.1-13.13.3/cy.jdkdigital.productivebees.common.recipe.BeeSpawningRecipe$Serializer.<clinit>(BeeSpawningRecipe.java:93) ~[productivebees-1.21.1-13.13.3.jar%23446!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: ae2 --
+Details:
+	Caused by 0: java.lang.ExceptionInInitializerError
+		at TRANSFORMER/ae2@19.2.17/appeng.core.AppEngBase.lambda$new$0(AppEngBase.java:159) ~[appliedenergistics2-19.2.17.jar%23316!/:?] {re:classloading}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+		at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+	Mod file: /data/mods/appliedenergistics2-19.2.17.jar
+	Failure message: Applied Energistics 2 (ae2) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.ExceptionInInitializerError: null
+	Mod version: 19.2.17
+	Mod issues URL: https://github.com/AppliedEnergistics/Applied-Energistics-2/issues
+	Exception message: java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block / ae2:charger]
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.value(DeferredHolder.java:103) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.get(DeferredHolder.java:117) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/ae2@19.2.17/appeng.core.definitions.BlockDefinition.block(BlockDefinition.java:54) ~[appliedenergistics2-19.2.17.jar%23316!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/ae2@19.2.17/appeng.init.InitVillager.<clinit>(InitVillager.java:36) ~[appliedenergistics2-19.2.17.jar%23316!/:?] {re:classloading}
+	at TRANSFORMER/ae2@19.2.17/appeng.core.AppEngBase.lambda$new$0(AppEngBase.java:159) ~[appliedenergistics2-19.2.17.jar%23316!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: supplementaries --
+Details:
+	Mod file: /data/mods/supplementaries-1.21-3.5.34-neoforge.jar
+	Failure message: Supplementaries (supplementaries) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block / supplementaries:cannon]
+	Mod version: 1.21-3.5.34
+	Mod issues URL: https://github.com/MehVahdJukaar/supplementaries/issues
+	Exception message: java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block / supplementaries:cannon]
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.value(DeferredHolder.java:103) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.get(DeferredHolder.java:117) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.api.platform.neoforge.RegHelperImpl$Wrapper.get(RegHelperImpl.java:78) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.api.platform.RegHelper.lambda$registerPOI$19(RegHelper.java:238) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.api.platform.neoforge.RegHelperImpl.lambda$register$2(RegHelperImpl.java:207) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: glitchcore --
+Details:
+	Mod file: /data/mods/GlitchCore-neoforge-1.21.1-2.1.0.0.jar
+	Failure message: GlitchCore (glitchcore) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.NullPointerException: null
+	Mod version: 2.1.0.0
+	Mod issues URL: https://github.com/Glitchfiend/GlitchCore/issues
+	Exception message: java.lang.NullPointerException
+Stacktrace:
+	at MC-BOOTSTRAP/com.google.common@32.1.2-jre/com.google.common.base.Preconditions.checkNotNull(Preconditions.java:903) ~[guava-32.1.2-jre.jar%2387!/:?] {re:mixin}
+	at MC-BOOTSTRAP/com.google.common@32.1.2-jre/com.google.common.collect.ImmutableSet.construct(ImmutableSet.java:206) ~[guava-32.1.2-jre.jar%2387!/:?] {re:mixin}
+	at MC-BOOTSTRAP/com.google.common@32.1.2-jre/com.google.common.collect.ImmutableSet.of(ImmutableSet.java:152) ~[guava-32.1.2-jre.jar%2387!/:?] {re:mixin}
+	at TRANSFORMER/biomesoplenty@21.1.0.13/biomesoplenty.worldgen.carver.OriginCaveWorldCarver.<init>(OriginCaveWorldCarver.java:20) ~[BiomesOPlenty-neoforge-1.21.1-21.1.0.13.jar%23326!/:21.1.0.13] {re:classloading}
+	at TRANSFORMER/biomesoplenty@21.1.0.13/biomesoplenty.worldgen.carver.BOPWorldCarvers.registerCarvers(BOPWorldCarvers.java:21) ~[BiomesOPlenty-neoforge-1.21.1-21.1.0.13.jar%23326!/:21.1.0.13] {re:classloading}
+	at TRANSFORMER/glitchcore@2.1.0.0/glitchcore.util.RegistryHelper.lambda$accept$0(RegistryHelper.java:43) ~[GlitchCore-neoforge-1.21.1-2.1.0.0.jar%23392!/:2.1.0.0] {re:classloading}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at TRANSFORMER/glitchcore@2.1.0.0/glitchcore.util.RegistryHelper.accept(RegistryHelper.java:41) ~[GlitchCore-neoforge-1.21.1-2.1.0.0.jar%23392!/:2.1.0.0] {re:classloading}
+	at TRANSFORMER/glitchcore@2.1.0.0/glitchcore.util.RegistryHelper.accept(RegistryHelper.java:18) ~[GlitchCore-neoforge-1.21.1-2.1.0.0.jar%23392!/:2.1.0.0] {re:classloading}
+	at TRANSFORMER/glitchcore@2.1.0.0/glitchcore.event.EventManager.fire(EventManager.java:45) ~[GlitchCore-neoforge-1.21.1-2.1.0.0.jar%23392!/:2.1.0.0] {re:mixin,re:classloading}
+	at TRANSFORMER/glitchcore@2.1.0.0/glitchcore.neoforge.handlers.RegistryEventHandler.onRegister(RegistryEventHandler.java:24) ~[GlitchCore-neoforge-1.21.1-2.1.0.0.jar%23392!/:2.1.0.0] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: the_bumblezone --
+Details:
+	Caused by 0: java.lang.ExceptionInInitializerError
+		at TRANSFORMER/the_bumblezone@7.13.1+1.21.1-neoforge/com.telepathicgrunt.the_bumblezone.modinit.BzFeatures.lambda$static$6(BzFeatures.java:48) ~[the_bumblezone-7.13.1+1.21.1-neoforge.jar%23480!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+		at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+	Mod file: /data/mods/the_bumblezone-7.13.1+1.21.1-neoforge.jar
+	Failure message: The Bumblezone (the_bumblezone) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.ExceptionInInitializerError: null
+	Mod version: 7.13.1+1.21.1-neoforge
+	Mod issues URL: https://github.com/TelepathicGrunt/Bumblezone/issues
+	Exception message: java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block / the_bumblezone:sticky_honey_residue]
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.value(DeferredHolder.java:103) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.get(DeferredHolder.java:117) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/resourcefullib@3.0.12/com.teamresourceful.resourcefullib.common.registry.neoforge.NeoForgeRegistryEntry.get(NeoForgeRegistryEntry.java:17) ~[resourcefullib-neoforge-1.21-3.0.12.jar%23454!/:?] {re:classloading}
+	at TRANSFORMER/the_bumblezone@7.13.1+1.21.1-neoforge/com.telepathicgrunt.the_bumblezone.worldgen.features.StickyHoneyResidueFeature.<clinit>(StickyHoneyResidueFeature.java:21) ~[the_bumblezone-7.13.1+1.21.1-neoforge.jar%23480!/:?] {re:classloading}
+	at TRANSFORMER/the_bumblezone@7.13.1+1.21.1-neoforge/com.telepathicgrunt.the_bumblezone.modinit.BzFeatures.lambda$static$6(BzFeatures.java:48) ~[the_bumblezone-7.13.1+1.21.1-neoforge.jar%23480!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: thirst --
+Details:
+	Mod file: /data/mods/ThirstWasTaken-1.21.1-2.1.5.jar
+	Failure message: Thirst Was Taken (thirst) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:item / thirst:terracotta_water_bowl]
+	Mod version: 1.21.1-2.1.5
+	Mod issues URL: https://github.com/ghen-git/Thirst-Mod/issues
+	Exception message: java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:item / thirst:terracotta_water_bowl]
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.value(DeferredHolder.java:103) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.get(DeferredHolder.java:117) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/thirst@1.21.1-2.1.5/dev.ghen.thirst.foundation.tab.ThirstTab.lambda$static$1(ThirstTab.java:29) ~[ThirstWasTaken-1.21.1-2.1.5.jar%23481!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: trading_floor --
+Details:
+	Caused by 0: java.lang.ExceptionInInitializerError
+		at TRANSFORMER/trading_floor@3.0.16/com.cake.trading_floor.TradingFloor.onRegister(TradingFloor.java:80) ~[trading_floor-3.0.16.jar%23485!/:?] {re:classloading}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+		at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+	Mod file: /data/mods/trading_floor-3.0.16.jar
+	Failure message: Create: Trading Floor (trading_floor) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.ExceptionInInitializerError: null
+	Mod version: 3.0.16
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block / trading_floor:trading_depot]
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.value(DeferredHolder.java:103) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.get(DeferredHolder.java:117) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/Registrate.MC1._21._67@1.3.0+67/com.tterrag.registrate.util.entry.ItemProviderEntry.asItem(ItemProviderEntry.java:34) ~[Registrate-MC1.21-1.3.0+67.jar%23572!/:?] {re:mixin,re:computing_frames,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.ItemStack.<init>(ItemStack.java:258) ~[server-1.21.1-20240808.144430-srg.jar%23305!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:supplementaries.mixins.json:ItemStackAccessor from mod supplementaries,pl:mixin:APP:thirst.mixins.json:MixinItemStack from mod thirst,pl:mixin:APP:glitchcore.mixins.json:MixinItemStack from mod glitchcore,pl:mixin:APP:cold_sweat.mixin.json:MixinArmorBreak from mod cold_sweat,pl:mixin:APP:geckolib.mixins.json:common.ItemStackMixin from mod geckolib,pl:mixin:APP:azurelib.neo.mixins.json:ItemStackMixin_AzItemStackIdentityRegistry from mod azurelib,pl:mixin:APP:quark.mixins.json:ItemStackMixin from mod quark,pl:mixin:APP:minecolonies_compatibility.mixin.common.json:minecraft.ItemStackMixin from mod minecolonies_compatibility,pl:mixin:APP:create.mixins.json:ItemStackMixin from mod create,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.ItemStack.<init>(ItemStack.java:242) ~[server-1.21.1-20240808.144430-srg.jar%23305!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:supplementaries.mixins.json:ItemStackAccessor from mod supplementaries,pl:mixin:APP:thirst.mixins.json:MixinItemStack from mod thirst,pl:mixin:APP:glitchcore.mixins.json:MixinItemStack from mod glitchcore,pl:mixin:APP:cold_sweat.mixin.json:MixinArmorBreak from mod cold_sweat,pl:mixin:APP:geckolib.mixins.json:common.ItemStackMixin from mod geckolib,pl:mixin:APP:azurelib.neo.mixins.json:ItemStackMixin_AzItemStackIdentityRegistry from mod azurelib,pl:mixin:APP:quark.mixins.json:ItemStackMixin from mod quark,pl:mixin:APP:minecolonies_compatibility.mixin.common.json:minecraft.ItemStackMixin from mod minecolonies_compatibility,pl:mixin:APP:create.mixins.json:ItemStackMixin from mod create,pl:mixin:A}
+	at TRANSFORMER/Registrate.MC1._21._67@1.3.0+67/com.tterrag.registrate.util.entry.ItemProviderEntry.asStack(ItemProviderEntry.java:17) ~[Registrate-MC1.21-1.3.0+67.jar%23572!/:?] {re:mixin,re:computing_frames,re:classloading}
+	at TRANSFORMER/trading_floor@3.0.16/com.cake.trading_floor.foundation.advancement.TFAdvancement$Builder.icon(TFAdvancement.java:147) ~[trading_floor-3.0.16.jar%23485!/:?] {re:classloading}
+	at TRANSFORMER/trading_floor@3.0.16/com.cake.trading_floor.foundation.advancement.TFAdvancements.lambda$static$0(TFAdvancements.java:32) ~[trading_floor-3.0.16.jar%23485!/:?] {re:classloading}
+	at TRANSFORMER/trading_floor@3.0.16/com.cake.trading_floor.foundation.advancement.TFAdvancement.<init>(TFAdvancement.java:46) ~[trading_floor-3.0.16.jar%23485!/:?] {re:classloading}
+	at TRANSFORMER/trading_floor@3.0.16/com.cake.trading_floor.foundation.advancement.TFAdvancements.createTF(TFAdvancements.java:51) ~[trading_floor-3.0.16.jar%23485!/:?] {re:classloading}
+	at TRANSFORMER/trading_floor@3.0.16/com.cake.trading_floor.foundation.advancement.TFAdvancements.<clinit>(TFAdvancements.java:32) ~[trading_floor-3.0.16.jar%23485!/:?] {re:classloading}
+	at TRANSFORMER/trading_floor@3.0.16/com.cake.trading_floor.TradingFloor.onRegister(TradingFloor.java:80) ~[trading_floor-3.0.16.jar%23485!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: supplementaries --
+Details:
+	Mod file: /data/mods/supplementaries-1.21-3.5.34-neoforge.jar
+	Failure message: Supplementaries (supplementaries) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block_entity_type / supplementaries:globe]
+	Mod version: 1.21-3.5.34
+	Mod issues URL: https://github.com/MehVahdJukaar/supplementaries/issues
+	Exception message: java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block_entity_type / supplementaries:globe]
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.value(DeferredHolder.java:103) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.get(DeferredHolder.java:117) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.api.platform.neoforge.RegHelperImpl$Wrapper.get(RegHelperImpl.java:78) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at TRANSFORMER/supplementaries@1.21-3.5.34/net.mehvahdjukaar.supplementaries.integration.neoforge.CreateCompatImpl.lambda$static$4(CreateCompatImpl.java:81) ~[supplementaries-1.21-3.5.34-neoforge.jar%23476!/:?] {re:classloading}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.api.platform.neoforge.RegHelperImpl.lambda$register$2(RegHelperImpl.java:207) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: supplementaries --
+Details:
+	Mod file: /data/mods/supplementaries-1.21-3.5.34-neoforge.jar
+	Failure message: Supplementaries (supplementaries) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block_entity_type / supplementaries:notice_board]
+	Mod version: 1.21-3.5.34
+	Mod issues URL: https://github.com/MehVahdJukaar/supplementaries/issues
+	Exception message: java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block_entity_type / supplementaries:notice_board]
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.value(DeferredHolder.java:103) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.get(DeferredHolder.java:117) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.api.platform.neoforge.RegHelperImpl$Wrapper.get(RegHelperImpl.java:78) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at TRANSFORMER/supplementaries@1.21-3.5.34/net.mehvahdjukaar.supplementaries.integration.neoforge.CreateCompatImpl.lambda$static$0(CreateCompatImpl.java:47) ~[supplementaries-1.21-3.5.34-neoforge.jar%23476!/:?] {re:classloading}
+	at TRANSFORMER/moonlight@1.21-2.29.29/net.mehvahdjukaar.moonlight.api.platform.neoforge.RegHelperImpl.lambda$register$2(RegHelperImpl.java:207) ~[moonlight-1.21-2.29.29-neoforge.jar%23431!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: minecolonies --
+Details:
+	Mod file: /data/mods/minecolonies-1.1.1299-1.21.1-snapshot.jar
+	Failure message: MineColonies (minecolonies) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.NullPointerException: null
+	Mod version: 1.1.1299-1.21.1-snapshot
+	Mod issues URL: https://github.com/ldtteam/minecolonies/issues/new/choose
+	Exception message: java.lang.NullPointerException
+Stacktrace:
+	at java.base/java.util.Objects.requireNonNull(Unknown Source) ~[?:?] {re:mixin}
+	at TRANSFORMER/minecolonies@1.1.1299-1.21.1-snapshot/com.minecolonies.api.colony.buildings.registry.BuildingEntry$Builder.createBuildingEntry(BuildingEntry.java:105) ~[minecolonies-1.1.1299-1.21.1-snapshot.jar%23426!/:1.1.1299-1.21.1-snapshot] {re:classloading}
+	at TRANSFORMER/minecolonies@1.1.1299-1.21.1-snapshot/com.minecolonies.apiimp.initializer.ModBuildingsInitializer.lambda$static$1(ModBuildingsInitializer.java:39) ~[minecolonies-1.1.1299-1.21.1-snapshot.jar%23426!/:1.1.1299-1.21.1-snapshot] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: the_bumblezone --
+Details:
+	Caused by 0: java.lang.ExceptionInInitializerError
+		at TRANSFORMER/the_bumblezone@7.13.1+1.21.1-neoforge/com.telepathicgrunt.the_bumblezone.Bumblezone.registerDataSerializers(Bumblezone.java:230) ~[the_bumblezone-7.13.1+1.21.1-neoforge.jar%23480!/:?] {re:mixin,re:classloading}
+		at TRANSFORMER/the_bumblezone@7.13.1+1.21.1-neoforge/com.telepathicgrunt.the_bumblezone.events.base.EventHandler.invoke(EventHandler.java:25) ~[the_bumblezone-7.13.1+1.21.1-neoforge.jar%23480!/:?] {re:mixin,re:classloading}
+		at TRANSFORMER/the_bumblezone@7.13.1+1.21.1-neoforge/com.telepathicgrunt.the_bumblezone.neoforge.NeoForgeEventManager.onRegistryEvent(NeoForgeEventManager.java:209) ~[the_bumblezone-7.13.1+1.21.1-neoforge.jar%23480!/:?] {re:classloading}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+		at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+		at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+	Mod file: /data/mods/the_bumblezone-7.13.1+1.21.1-neoforge.jar
+	Failure message: The Bumblezone (the_bumblezone) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.ExceptionInInitializerError: null
+	Mod version: 7.13.1+1.21.1-neoforge
+	Mod issues URL: https://github.com/TelepathicGrunt/Bumblezone/issues
+	Exception message: java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:item / the_bumblezone:essence_of_the_bees]
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.value(DeferredHolder.java:103) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.get(DeferredHolder.java:117) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/resourcefullib@3.0.12/com.teamresourceful.resourcefullib.common.registry.neoforge.NeoForgeRegistryEntry.get(NeoForgeRegistryEntry.java:17) ~[resourcefullib-neoforge-1.21-3.0.12.jar%23454!/:?] {re:classloading}
+	at TRANSFORMER/the_bumblezone@7.13.1+1.21.1-neoforge/com.telepathicgrunt.the_bumblezone.entities.mobs.BeeQueenEntity.<clinit>(BeeQueenEntity.java:114) ~[the_bumblezone-7.13.1+1.21.1-neoforge.jar%23480!/:?] {re:classloading}
+	at TRANSFORMER/the_bumblezone@7.13.1+1.21.1-neoforge/com.telepathicgrunt.the_bumblezone.Bumblezone.registerDataSerializers(Bumblezone.java:230) ~[the_bumblezone-7.13.1+1.21.1-neoforge.jar%23480!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/the_bumblezone@7.13.1+1.21.1-neoforge/com.telepathicgrunt.the_bumblezone.events.base.EventHandler.invoke(EventHandler.java:25) ~[the_bumblezone-7.13.1+1.21.1-neoforge.jar%23480!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/the_bumblezone@7.13.1+1.21.1-neoforge/com.telepathicgrunt.the_bumblezone.neoforge.NeoForgeEventManager.onRegistryEvent(NeoForgeEventManager.java:209) ~[the_bumblezone-7.13.1+1.21.1-neoforge.jar%23480!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- Mod loading issue for: netherexp --
+Details:
+	Mod file: /data/mods/Jadens-Nether-Expansion-2.4.0-BETA.1.jar
+	Failure message: Jaden's Nether Expansion (netherexp) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block / netherexp:ectoplasm_cauldron]
+	Mod version: 2.4.0
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.NullPointerException: Trying to access unbound value: ResourceKey[minecraft:block / netherexp:ectoplasm_cauldron]
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.value(DeferredHolder.java:103) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredHolder.get(DeferredHolder.java:117) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:computing_frames,re:mixin,re:classloading}
+	at TRANSFORMER/netherexp@2.4.0/net.jadenxgamer.netherexp.registry.JNEFluids.lambda$static$0(JNEFluids.java:41) ~[Jadens-Nether-Expansion-2.4.0-BETA.1.jar%23404!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%2362!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.42.jar%2359!/:4.0] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.42.jar%2359!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:mixin,re:classloading,pl:mixin:APP:supermartijn642corelib.mixins.json:GameDataMixin from mod supermartijn642corelib,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.224/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.224-universal.jar%23306!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?] {re:mixin}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Linux (amd64) version 6.12.33-production+truenas
+	Java Version: 21.0.10, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 1447204752 bytes (1380 MiB) / 4294967296 bytes (4096 MiB) up to 4294967296 bytes (4096 MiB)
+	CPUs: 2
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz
+	Identifier: Intel64 Family 6 Model 158 Stepping 10
+	Microarchitecture: Coffee Lake
+	Frequency (GHz): 3.70
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MiB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 15972.23
+	Virtual memory used (MiB): 19631.10
+	Swap memory total (MiB): 0.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 135601.75, total: 231481.75
+	Space in storage for workdir (MiB): available: 135601.75, total: 136277.88
+	JVM Flags: 2 total; -Xmx4G -Xms4G
+	ModLauncher: 11.0.5+main.901c6ea8
+	ModLauncher launch target: forgeserver
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.42.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.42.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.42.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.5.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		kotlinforforge@5.11.0
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		addonslib-neoforge-1.21.1-1.10.jar                |Addons Lib                    |addonslib                     |1.21.1-1.10         |Manifest: NOSIGNATURE
+		ae2importexportcard-1.21.1-1.4.3.jar              |AE2 Import Export Card        |ae2importexportcard           |1.21.1-1.4.3        |Manifest: NOSIGNATURE
+		ae2jeiintegration-1.2.1.jar                       |AE2 JEI Integration           |ae2jeiintegration             |1.2.1               |Manifest: NOSIGNATURE
+		AE2MEGAThings-1.21.1-2.0.4.jar                    |AE2 MEGA Things               |ae2_mega_things               |2.0.4               |Manifest: NOSIGNATURE
+		AE2-Things-1.4.2-beta.jar                         |AE2 Things                    |ae2things                     |1.4.2-beta          |Manifest: NOSIGNATURE
+		ae2wtlib_api-19.2.0.jar                           |AE2WTLib API                  |ae2wtlib_api                  |19.2.0              |Manifest: NOSIGNATURE
+		animal_feeding_trough-1.1.2+1.21-neoforge.jar     |Animal Feeding Trough         |animal_feeding_trough         |1.1.2               |Manifest: NOSIGNATURE
+		appleskin-neoforge-mc1.21-3.0.9.jar               |AppleSkin                     |appleskin                     |3.0.9+mc1.21        |Manifest: NOSIGNATURE
+		appliedenergistics2-19.2.17.jar                   |Applied Energistics 2         |ae2                           |19.2.17             |Manifest: NOSIGNATURE
+		Applied-Mekanistics-1.6.3.jar                     |Applied Mekanistics           |appmek                        |1.6.3               |Manifest: NOSIGNATURE
+		appliedschematicannon-1.0.4.jar                   |Applied Schematicannon        |appliedschematicannon         |1.0.4               |Manifest: NOSIGNATURE
+		AppliedFlux-1.21-2.1.4-neoforge.jar               |AppliedFlux                   |appflux                       |1.21-2.1.4-neoforge |Manifest: NOSIGNATURE
+		architectury-13.0.8-neoforge.jar                  |Architectury                  |architectury                  |13.0.8              |Manifest: NOSIGNATURE
+		athena-neoforge-1.21-4.0.2.jar                    |Athena                        |athena                        |4.0.2               |Manifest: NOSIGNATURE
+		azurelib-neo-1.21.1-3.1.4.jar                     |AzureLib                      |azurelib                      |3.1.4               |Manifest: NOSIGNATURE
+		balm-neoforge-1.21.1-21.0.56.jar                  |Balm                          |balm                          |21.0.56             |Manifest: NOSIGNATURE
+		better_lib-neoforge-1.21.1-1.0.109.jar            |Better lib                    |better_lib                    |1.0.109             |Manifest: NOSIGNATURE
+		biggerbetterendcities-1.21.1-1.0.0.jar            |BiggerBetterEndCities         |biggerbetterendcities         |1.21.1-1.0.0        |Manifest: NOSIGNATURE
+		biolith-neoforge-3.0.10.jar                       |Biolith                       |biolith                       |3.0.10              |Manifest: NOSIGNATURE
+		BiomesOPlenty-neoforge-1.21.1-21.1.0.13.jar       |Biomes O' Plenty              |biomesoplenty                 |21.1.0.13           |Manifest: NOSIGNATURE
+		bonsaitrees4-4.0.9.jar                            |Bonsai Trees 4                |bonsaitrees4                  |4.0.9               |Manifest: NOSIGNATURE
+		BrewinAndChewin-neoforge-4.4.2+1.21.1.jar         |Brewin' And Chewin'           |brewinandchewin               |4.4.2               |Manifest: NOSIGNATURE
+		ChickenChunks-1.21.1-2.12.0.103.jar               |ChickenChunks                 |chickenchunks                 |2.12.0.103          |Manifest: 31:e6:db:63:47:4a:6e:e0:0a:2c:11:d1:76:db:4e:82:ff:56:2d:29:93:d2:e5:02:bd:d3:bd:9d:27:47:a5:71
+		Chimes-v2.1.1-1.21.1-NeoForge.jar                 |Chimes                        |chimes                        |2.1.1               |Manifest: NOSIGNATURE
+		chisel-neoforge-2.0.0+mc1.21.1.jar                |Chisel Reborn                 |chisel                        |2.0.0+mc1.21.1      |Manifest: NOSIGNATURE
+		cloth-config-15.0.140-neoforge.jar                |Cloth Config v15 API          |cloth_config                  |15.0.140            |Manifest: NOSIGNATURE
+		CodeChickenLib-1.21.1-4.6.1.526.jar               |CodeChicken Lib               |codechickenlib                |4.6.1.526           |Manifest: 31:e6:db:63:47:4a:6e:e0:0a:2c:11:d1:76:db:4e:82:ff:56:2d:29:93:d2:e5:02:bd:d3:bd:9d:27:47:a5:71
+		ColdSweat-2.4.jar                                 |Cold Sweat                    |cold_sweat                    |2.4                 |Manifest: NOSIGNATURE
+		comforts-neoforge-9.0.5+1.21.1.jar                |Comforts                      |comforts                      |9.0.5+1.21.1        |Manifest: NOSIGNATURE
+		MineColonies_Compatibility-1.21.1-3.45.jar        |Compatibility addon for MineCo|minecolonies_compatibility    |3.45                |Manifest: NOSIGNATURE
+		conditional-mixin-neoforge-0.6.4.jar              |conditional mixin             |conditional_mixin             |0.6.4               |Manifest: NOSIGNATURE
+		ConstructionSticks-1.21.1-1.3.0.jar               |Construction Sticks           |constructionstick             |1.3.0               |Manifest: NOSIGNATURE
+		corpse-neoforge-1.21.1-1.1.13.jar                 |Corpse                        |corpse                        |1.21.1-1.1.13       |Manifest: NOSIGNATURE
+		create-1.21.1-6.0.9.jar                           |Create                        |create                        |6.0.9               |Manifest: NOSIGNATURE
+		create_aquatic_ambitions-1.21.1-2.0.2.jar         |Create Aquatic Ambitions      |create_aquatic_ambitions      |2.0.2               |Manifest: NOSIGNATURE
+		createbigcannons-5.11.2-mc.1.21.1.jar             |Create Big Cannons            |createbigcannons              |5.11.2              |Manifest: NOSIGNATURE
+		bits_n_bobs-0.0.44.jar                            |Create Bits 'n' Bobs          |bits_n_bobs                   |0.0.44              |Manifest: NOSIGNATURE
+		createaddition-1.5.10.jar                         |Create Crafts & Additions     |createaddition                |1.5.10              |Manifest: NOSIGNATURE
+		createdeco-2.1.2.jar                              |Create Deco                   |createdeco                    |2.1.2               |Manifest: NOSIGNATURE
+		createdieselgenerators-1.21.1-1.3.11.jar          |Create Diesel Generators      |createdieselgenerators        |1.21.1-1.3.11       |Manifest: NOSIGNATURE
+		Create Encased-1.21.1-1.8-ht2.jar                 |Create Encased                |createcasing                  |1.8-ht2             |Manifest: NOSIGNATURE
+		createliquidfuel-2.1.1-1.21.1.jar                 |Create Liquid Fuel            |createliquidfuel              |2.1.1-1.21.1        |Manifest: NOSIGNATURE
+		create_mechanical_extruder-1.21.1-2.2.0-6.0.8.jar |Create Mechanical Extruder    |create_mechanical_extruder    |1.21.1-2.2.0-6.0.8  |Manifest: NOSIGNATURE
+		createrailwaysnavigator-neoforge-1.21.1-alpha-0.9.|Create Railways Navigator     |createrailwaysnavigator       |1.21.1-alpha-0.9.0-C|Manifest: NOSIGNATURE
+		createsifter-1.21.1-2.2.1.jar                     |Create Sifter                 |createsifter                  |1.21.1-2.2.0        |Manifest: NOSIGNATURE
+		sliceanddice-forge-4.2.4.jar                      |Create Slice & Dice           |sliceanddice                  |4.2.4               |Manifest: NOSIGNATURE
+		createstockbridge-1.21.1-0.1.6.jar                |Create Stock Bridge           |createstockbridge             |0.1.6               |Manifest: NOSIGNATURE
+		createappliedkinetics-1.5.4-1.21.1.jar            |Create: Applied Kinetics      |createappliedkinetics         |1.5.4-1.21.1        |Manifest: NOSIGNATURE
+		bellsandwhistles-0.4.7-1.21.1.jar                 |Create: Bells & Whistles      |bellsandwhistles              |0.4.7-1.21.1        |Manifest: NOSIGNATURE
+		create_better_motors-3.1.9.jar                    |Create: Better Motors         |create_better_motors          |3.1.9               |Manifest: NOSIGNATURE
+		create-central-kitchen-2.3.0.jar                  |Create: Central Kitchen       |create_central_kitchen        |2.3.0               |Manifest: NOSIGNATURE
+		create_cold_sweat-1.1.2.jar                       |Create: Cold Sweat            |create_cold_sweat             |1.1.2               |Manifest: NOSIGNATURE
+		colorful_catalysts-1.3.jar                        |Create: Colorful Catalysts    |colorful_catalysts            |1.3                 |Manifest: NOSIGNATURE
+		create_compatible_storage-2.10.0-neoforge.jar     |Create: Compatible Storage    |create_compatible_storage     |2.10.0-neoforge     |Manifest: NOSIGNATURE
+		create_connected-1.1.13-mc1.21.1.jar              |Create: Connected             |create_connected              |1.1.13-mc1.21.1     |Manifest: NOSIGNATURE
+		create_more_additions-1.9.0-neoforge-1.21.1.jar   |Create: Crafts & (More) Additi|create_more_additions         |1.9.0               |Manifest: NOSIGNATURE
+		create_deep_dark-3.0.2-neoforge-1.21.1.jar        |Create: Deep Dark             |create_deep_dark              |3.0.2               |Manifest: NOSIGNATURE
+		create-dragons-plus-1.8.7.jar                     |Create: Dragons Plus          |create_dragons_plus           |1.8.7               |Manifest: NOSIGNATURE
+		interiors-1.21.1-neoforge-0.6.1.jar               |Create: Interiors             |interiors                     |0.6.1               |Manifest: NOSIGNATURE
+		morebridges-1.0.2.jar                             |Create: More Bridges          |morebridges                   |1.0.2               |Manifest: NOSIGNATURE
+		CreateNumismatics-1.0.19+neoforge-mc1.21.1.jar    |Create: Numismatics           |numismatics                   |1.0.19+neoforge-mc1.|Manifest: NOSIGNATURE
+		create_pattern_schematics-2.0.10.jar              |Create: Pattern Schematics    |create_pattern_schematics     |2.0.10              |Manifest: NOSIGNATURE
+		pipeorgans-0.8.2+1.21.1.jar                       |Create: Sound of Steam        |pipeorgans                    |0.8.2+1.21.1        |Manifest: NOSIGNATURE
+		tfmg-1.2.0.jar                                    |Create: The Factory Must Grow |tfmg                          |1.2.0               |Manifest: NOSIGNATURE
+		create_things_and_misc-4.1.0-neoforge-1.21.1.jar  |create: things and misc       |create_things_and_misc        |4.1.0               |Manifest: NOSIGNATURE
+		trading_floor-3.0.16.jar                          |Create: Trading Floor         |trading_floor                 |3.0.16              |Manifest: NOSIGNATURE
+		create_ultimate_factory-2.2.3-neoforge-1.21.1.jar |Create: Ultimate Factory      |create_ultimate_factory       |2.2.3               |Manifest: NOSIGNATURE
+		createschematicchecker-0.21.18-6.0-neoforge-1.21.1|Create:Schematic Checker      |createschematicchecker        |0.21.18-6.0         |Manifest: NOSIGNATURE
+		cristellib-neoforge-1.21.1-3.0.3.jar              |Cristel Lib                   |cristellib                    |3.0.3               |Manifest: NOSIGNATURE
+		cryonicconfig-neoforge-1.0.0+mc1.21.11.jar        |Cryonic Config                |cryonicconfig                 |1.0.0+mc1.21.11     |Manifest: NOSIGNATURE
+		curios-neoforge-9.5.1+1.21.1.jar                  |Curios API                    |curios                        |9.5.1+1.21.1        |Manifest: NOSIGNATURE
+		deimos-1.21.1-neoforge-2.5.jar                    |Deimos                        |deimos                        |2.5                 |Manifest: NOSIGNATURE
+		domum-ornamentum-1.0.233-snapshot-main.jar        |Domum Ornamentum              |domum_ornamentum              |1.0.233-snapshot    |Manifest: NOSIGNATURE
+		dragonlib-neoforge-1.21.1-beta-3.0.24.jar         |DragonLib                     |dragonlib                     |1.21.1-beta-3.0.24  |Manifest: NOSIGNATURE
+		DustyDecorations_1.21.1Neoforge_V1.12.1.jar       |Dusty Decorations             |dustydecorations              |1.12                |Manifest: NOSIGNATURE
+		EdivadLib-1.21-3.0.0.jar                          |EdivadLib                     |edivadlib                     |3.0.0               |Manifest: NOSIGNATURE
+		ElysiumAPI-1.21.1-1.2.0-ALPHA.8.jar               |Elysium-API                   |elysium_api                   |1.2.0               |Manifest: NOSIGNATURE
+		Engineers Delight 1.21.1 neoforge R.1.8.jar       |Engineers Delight             |tmted                         |1.8.0               |Manifest: NOSIGNATURE
+		everycomp-1.21-2.11.37-neoforge.jar               |Every Compat                  |everycomp                     |1.21-2.11.37        |Manifest: NOSIGNATURE
+		ExtendedAE-1.21-2.2.31-neoforge.jar               |ExtendedAE                    |extendedae                    |1.21-2.2.31-neoforge|Manifest: NOSIGNATURE
+		ExtraDisks-1.21.1-4.0.14.jar                      |Extra Disks                   |extradisks                    |1.21.1-4.0.14       |Manifest: NOSIGNATURE
+		ExtraStorage-1.21.1-5.0.8.jar                     |ExtraStorage                  |extrastorage                  |5.0.8               |Manifest: NOSIGNATURE
+		factory_blocks-neoforge-1.4.0+mc1.21.1.jar        |Factory Blocks                |factory_blocks                |1.4.0+mc1.21.1      |Manifest: NOSIGNATURE
+		FarmersDelight-1.21.1-1.2.11.jar                  |Farmer's Delight              |farmersdelight                |1.2.11              |Manifest: NOSIGNATURE
+		farmersknives-neoforge-1.21.1-4.1.0.jar           |Farmer's Knives               |farmersknives                 |1.21.1-4.1.0        |Manifest: NOSIGNATURE
+		FarmersStructures-1.0.2-1.21.1_neoforge.jar       |FarmersStructures             |farmers_structures            |1.0.2               |Manifest: NOSIGNATURE
+		fishermens_trap-Neoforge-1.21.1-3.1.0.jar         |Fishermens Trap               |fishermens_trap               |3.1.0               |Manifest: NOSIGNATURE
+		flywheel-neoforge-1.21.1-1.0.6.jar                |Flywheel                      |flywheel                      |1.0.6               |Manifest: NOSIGNATURE
+		forgeconfigapiport-neoforge-21.1.1.jar            |Forge Config API Port         |forgeconfigapiport            |21.1.1              |Manifest: NOSIGNATURE
+		fabric-api-base-0.4.42+d1308ded19.jar             |Forgified Fabric API Base     |fabric_api_base               |0.4.42+d1308ded19   |Manifest: NOSIGNATURE
+		fabric-block-view-api-v2-1.0.10+9afaaf8c19.jar    |Forgified Fabric BlockView API|fabric_block_view_api_v2      |1.0.10+9afaaf8c19   |Manifest: NOSIGNATURE
+		fabric-renderer-api-v1-3.4.0+9c40919e19.jar       |Forgified Fabric Renderer API |fabric_renderer_api_v1        |3.4.0+9c40919e19    |Manifest: NOSIGNATURE
+		fabric-rendering-data-attachment-v1-0.3.48+73761d2|Forgified Fabric Rendering Dat|fabric_rendering_data_attachme|0.3.48+73761d2e19   |Manifest: NOSIGNATURE
+		ftb-essentials-neoforge-2101.1.9.jar              |FTB Essentials                |ftbessentials                 |2101.1.9            |Manifest: NOSIGNATURE
+		ftb-library-neoforge-2101.1.31.jar                |FTB Library                   |ftblibrary                    |2101.1.31           |Manifest: NOSIGNATURE
+		ftb-ranks-neoforge-2101.1.3.jar                   |FTB Ranks                     |ftbranks                      |2101.1.3            |Manifest: NOSIGNATURE
+		ftb-ultimine-neoforge-2101.1.13.jar               |FTB Ultimine                  |ftbultimine                   |2101.1.13           |Manifest: NOSIGNATURE
+		geckolib-neoforge-1.21.1-4.8.4.jar                |GeckoLib 4                    |geckolib                      |4.8.4               |Manifest: NOSIGNATURE
+		giant_brown_mushroom-1.0.1-neoforge-1.21.1.jar    |Giant Brown Mushroom          |giant_brown_mushroom          |1.0.1               |Manifest: NOSIGNATURE
+		GlitchCore-neoforge-1.21.1-2.1.0.0.jar            |GlitchCore                    |glitchcore                    |2.1.0.0             |Manifest: NOSIGNATURE
+		Glodium-1.21-2.2-neoforge.jar                     |Glodium                       |glodium                       |1.21-2.2-neoforge   |Manifest: NOSIGNATURE
+		GrandPower-3.0.2.jar                              |Grand Power                   |grandpower                    |3.0.2               |Manifest: NOSIGNATURE
+		gravestone-neoforge-1.21.1-1.0.35.jar             |Gravestone Mod                |gravestone                    |1.21.1-1.0.35       |Manifest: NOSIGNATURE
+		greenhouseconfig-2.2.3+1.21.1-neoforge.jar        |Greenhouse Config             |greenhouseconfig              |2.2.3+1.21.1        |Manifest: NOSIGNATURE
+		greenhouseconfig_night_config-1.1.0.jar           |Greenhouse Config - Night Conf|greenhouseconfig_night_config |1.1.0               |Manifest: NOSIGNATURE
+		greenhouseconfig_toml-1.1.0.jar                   |Greenhouse Config - TOML      |greenhouseconfig_toml         |1.1.0               |Manifest: NOSIGNATURE
+		guideme-21.1.15.jar                               |GuideME                       |guideme                       |21.1.15             |Manifest: NOSIGNATURE
+		ImmediatelyFast-NeoForge-1.6.10+1.21.1.jar        |ImmediatelyFast               |immediatelyfast               |1.6.10+1.21.1       |Manifest: NOSIGNATURE
+		immersive_aircraft-1.4.3+1.21.1-neoforge.jar      |Immersive Aircraft            |immersive_aircraft            |1.4.3+1.21.1        |Manifest: NOSIGNATURE
+		ImmersiveEngineering-1.21.1-12.4.2-194.jar        |Immersive Engineering         |immersiveengineering          |12.4.2-194          |Manifest: NOSIGNATURE
+		ImmersivePosts-1.21.1-4.3.1-16.jar                |Immersive Posts               |immersiveposts                |4.3.1-16            |Manifest: d5:aa:49:67:b7:dd:64:8a:a4:7d:3e:57:12:6b:f9:3f:e8:5e:6b:24:d9:f9:c5:fb:c5:e7:a0:cf:98:64:dc:d0
+		Jade-1.21.1-NeoForge-15.10.5.jar                  |Jade                          |jade                          |15.10.5+neoforge    |Manifest: NOSIGNATURE
+		JadeAddons-1.21.1-NeoForge-6.1.0.jar              |Jade Addons                   |jadeaddons                    |6.1.0+neoforge      |Manifest: NOSIGNATURE
+		jadecolonies-1.21.1-1.6.0.jar                     |JadeColonies                  |jadecolonies                  |1.6.0               |Manifest: NOSIGNATURE
+		Jadens-Nether-Expansion-2.4.0-BETA.1.jar          |Jaden's Nether Expansion      |netherexp                     |2.4.0               |Manifest: NOSIGNATURE
+		jeimultiblocks-1.21.1-1.0.6.jar                   |Just Enough Immersive Multiblo|jeimultiblocks                |1.0.6               |Manifest: NOSIGNATURE
+		jei-1.21.1-neoforge-19.27.0.340.jar               |Just Enough Items             |jei                           |19.27.0.340         |Manifest: NOSIGNATURE
+		thedarkcolour.kffmod-5.11.0.jar                   |Kotlin For Forge              |kotlinforforge                |5.11.0              |Manifest: NOSIGNATURE
+		kuma-api-neoforge-21.0.7+1.21.jar                 |KumaAPI                       |kuma_api                      |21.0.7              |Manifest: NOSIGNATURE
+		lodestone-1.21.1-1.8.2.525.jar                    |Lodestone                     |lodestone                     |1.8.2               |Manifest: NOSIGNATURE
+		mcw-bridges-3.1.2-mc1.21.1neoforge.jar            |Macaw's Bridges               |mcwbridges                    |3.1.2               |Manifest: NOSIGNATURE
+		mcw-doors-1.1.5-mc1.21.1neoforge.jar              |Macaw's Doors                 |mcwdoors                      |1.1.5               |Manifest: NOSIGNATURE
+		mcw-mcwfences-1.2.1-mc1.21.1neoforge.jar          |Macaw's Fences and Walls      |mcwfences                     |1.2.1               |Manifest: NOSIGNATURE
+		mcw-furniture-3.4.1-mc1.21.1neoforge.jar          |Macaw's Furniture             |mcwfurnitures                 |3.4.1               |Manifest: NOSIGNATURE
+		mcwquark-neoforge-1.21.1-1.6.jar                  |Macaw's Quark                 |mcwquark                      |1.21.1-1.6          |Manifest: NOSIGNATURE
+		mcw-roofs-2.3.2-mc1.21.1neoforge.jar              |Macaw's Roofs                 |mcwroofs                      |2.3.2               |Manifest: NOSIGNATURE
+		mcw-mcwstairs-1.0.2-mc1.21.1neoforge.jar          |Macaw's Stairs and Balconies  |mcwstairs                     |1.0.2               |Manifest: NOSIGNATURE
+		mcw-trapdoors-1.1.5-mc1.21.1neoforge.jar          |Macaw's Trapdoors             |mcwtrpdoors                   |1.1.5               |Manifest: NOSIGNATURE
+		mcw-mcwwindows-2.4.2-mc1.21.1neoforge.jar         |Macaw's Windows               |mcwwindows                    |2.4.2               |Manifest: NOSIGNATURE
+		man_of_many_planes-0.2.1+1.21.1-neoforge.jar      |Man of Many Planes            |man_of_many_planes            |0.2.1+1.21.1        |Manifest: NOSIGNATURE
+		merequester-neoforge-1.21.1-1.4.2.jar             |ME Requester                  |merequester                   |1.21.1-1.4.2        |Manifest: NOSIGNATURE
+		mechanicals-1.21.1-1.1.0.jar                      |Mechanicals Lib               |mechanicals                   |1.1.0               |Manifest: NOSIGNATURE
+		megacells-4.10.2.jar                              |MEGA Cells                    |megacells                     |4.10.2              |Manifest: NOSIGNATURE
+		mekajadeupgrade-1.3.jar                           |MekaJadeUpgrades              |mekajadeupgrade               |1.3                 |Manifest: NOSIGNATURE
+		Mekanism-1.21.1-10.7.19.85.jar                    |Mekanism                      |mekanism                      |10.7.19             |Manifest: NOSIGNATURE
+		mekanismcovers-1.3-BETA+1.21.jar                  |Mekanism Covers               |mekanismcovers                |1.3-BETA+1.21       |Manifest: NOSIGNATURE
+		mekanismcurios-1.21.1-1.2.1.jar                   |Mekanism Curios               |mekanismcurios                |1.2.1               |Manifest: NOSIGNATURE
+		MekanismWeapons-1.21.1-3.0.jar                    |Mekanism: Weapons             |mekaweapons                   |3.0                 |Manifest: NOSIGNATURE
+		minecolonies-1.1.1299-1.21.1-snapshot.jar         |MineColonies                  |minecolonies                  |1.1.1299-1.21.1-snap|Manifest: NOSIGNATURE
+		server-1.21.1-20240808.144430-srg.jar             |Minecraft                     |minecraft                     |1.21.1              |Manifest: NOSIGNATURE
+		minersdelight-1.21.1-1.4.2.jar                    |Miners Delight                |minersdelight                 |1.4.2               |Manifest: NOSIGNATURE
+		modernfix-neoforge-5.26.1+mc1.21.1.jar            |ModernFix                     |modernfix                     |5.26.1+mc1.21.1     |Manifest: NOSIGNATURE
+		moonlight-1.21-2.29.29-neoforge.jar               |Moonlight Lib                 |moonlight                     |1.21-2.29.29        |Manifest: NOSIGNATURE
+		moresweatcompat-1.0.5.jar                         |More Compat for Cold Sweat    |moresweatcompat               |1.0.5               |Manifest: NOSIGNATURE
+		moredelight-25.07.28a-1.21-neoforge.jar           |More Delight                  |moredelight                   |25.07.28a-1.21-neofo|Manifest: NOSIGNATURE
+		more_pylons-1.2.0-neoforge-1.21.1.jar             |More Pylons                   |more_pylons                   |1.2.0               |Manifest: NOSIGNATURE
+		MouseTweaks-neoforge-mc1.21-2.26.1.jar            |Mouse Tweaks                  |mousetweaks                   |2.26.1              |Manifest: NOSIGNATURE
+		multipiston-1.2.58-1.21.1.jar                     |Multi-Piston                  |multipiston                   |1.2.58-1.21.1       |Manifest: NOSIGNATURE
+		musketmod-1.21.1-neoforge-1.5.4.jar               |Musket Mod                    |musketmod                     |1.5.4               |Manifest: NOSIGNATURE
+		neoforge-21.1.224-universal.jar                   |NeoForge                      |neoforge                      |21.1.224            |Manifest: NOSIGNATURE
+		nethervillagertrader-2.0.0-neoforge-1.21.1.jar    |NetherVillagerTrader          |nethervillagertrader          |2.0.0               |Manifest: NOSIGNATURE
+		oceansdelight-neoforge-1.0.3-1.21.jar             |Ocean's Delight               |oceansdelight                 |1.0.3               |Manifest: NOSIGNATURE
+		Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.3.0.jar |Oh The Trees You'll Grow      |ohthetreesyoullgrow           |5.3.0               |Manifest: NOSIGNATURE
+		pipez-neoforge-1.21.1-1.2.19.jar                  |Pipez                         |pipez                         |1.21.1-1.2.19       |Manifest: NOSIGNATURE
+		player-animation-lib-forge-2.0.4+1.21.1.jar       |Player Animator               |playeranimator                |2.0.4+1.21.1        |Manifest: NOSIGNATURE
+		ponder-neoforge-1.0.81+mc1.21.1.jar               |Ponder                        |ponder                        |1.0.81+mc1.21.1     |Manifest: NOSIGNATURE
+		prickle-neoforge-1.21.1-21.1.11.jar               |PrickleMC                     |prickle                       |21.1.11             |Manifest: NOSIGNATURE
+		productivebees-1.21.1-13.13.3.jar                 |Productive Bees               |productivebees                |1.21.1-13.13.3      |Manifest: NOSIGNATURE
+		productivelib-1.21.1-0.2.0.jar                    |Productive Lib                |productivelib                 |1.21.1-0.2.0        |Manifest: NOSIGNATURE
+		pylons-1.21.1-5.4.2.jar                           |Pylons                        |pylons                        |5.4.2               |Manifest: NOSIGNATURE
+		Quark-4.1-476.jar                                 |Quark                         |quark                         |4.1-476             |Manifest: NOSIGNATURE
+		refinedstorage-neoforge-2.0.1.jar                 |Refined Storage               |refinedstorage                |2.0.1               |Manifest: NOSIGNATURE
+		refinedstorage-curios-integration-1.0.0.jar       |Refined Storage - Curios Integ|refinedstorage_curios_integrat|1.0.0               |Manifest: NOSIGNATURE
+		refinedstorage-jei-integration-neoforge-1.0.0.jar |Refined Storage - JEI Integrat|refinedstorage_jei_integration|1.0.0               |Manifest: NOSIGNATURE
+		refinedstorage-mekanism-integration-1.1.1.jar     |Refined Storage - Mekanism Int|refinedstorage_mekanism_integr|1.1.1               |Manifest: NOSIGNATURE
+		refined-types-1.21.1-0.2.9.jar                    |Refined Types                 |refinedtypes                  |1.21.1-0.2.9        |Manifest: NOSIGNATURE
+		resourcefullib-neoforge-1.21-3.0.12.jar           |Resourceful Lib               |resourcefullib                |3.0.12              |Manifest: NOSIGNATURE
+		ritchiesprojectilelib-2.1.2-mc.1.21.1-neoforge.jar|Ritchie's Projectile Library  |ritchiesprojectilelib         |2.1.2               |Manifest: NOSIGNATURE
+		rsrequestify-1.21.1-3.0.0.jar                     |RS: Requestify                |rsrequestify                  |3.0.0               |Manifest: NOSIGNATURE
+		samurai_dynasty-0.1.6-1.21.1.jar                  |Samurai Dynasty               |samurai_dynasty               |0.1.6-1.21.1        |Manifest: NOSIGNATURE
+		security_create-1.0.0-neoforge-1.21.1.jar         |Security Create               |security_create               |1.0.0               |Manifest: NOSIGNATURE
+		[1.21.1] SecurityCraft v1.10.1.jar                |SecurityCraft                 |securitycraft                 |1.10.1              |Manifest: NOSIGNATURE
+		voicechat-neoforge-1.21.1-2.6.16.jar              |Simple Voice Chat             |voicechat                     |1.21.1-2.6.16       |Manifest: NOSIGNATURE
+		sodium-neoforge-0.6.13+mc1.21.1.jar               |Sodium                        |sodium                        |0.6.13+mc1.21.1     |Manifest: NOSIGNATURE
+		sodiumdynamiclights-neoforge-1.0.10-1.21.1.jar    |Sodium Dynamic Lights         |sodiumdynamiclights           |1.0.9               |Manifest: NOSIGNATURE
+		sophisticatedbackpacks-1.21.1-3.25.37.1646.jar    |Sophisticated Backpacks       |sophisticatedbackpacks        |3.25.37             |Manifest: NOSIGNATURE
+		sophisticatedbackpackscreateintegration-1.21.1-0.1|Sophisticated Backpacks Create|sophisticatedbackpackscreatein|0.1.5               |Manifest: NOSIGNATURE
+		sophisticatedcore-1.21.1-1.4.23.1664.jar          |Sophisticated Core            |sophisticatedcore             |1.4.23              |Manifest: NOSIGNATURE
+		sophisticatedstorage-1.21.1-1.5.36.1606.jar       |Sophisticated Storage         |sophisticatedstorage          |1.5.36              |Manifest: NOSIGNATURE
+		sophisticatedstoragecreateintegration-1.21.1-0.1.1|Sophisticated Storage Create I|sophisticatedstoragecreateinte|0.1.14              |Manifest: NOSIGNATURE
+		spectrelib-neoforge-0.17.2+1.21.jar               |SpectreLib                    |spectrelib                    |0.17.2+1.21         |Manifest: NOSIGNATURE
+		StorageDrawers-neoforge-1.21.1-13.11.4.jar        |Storage Drawers               |storagedrawers                |13.11.4             |Manifest: NOSIGNATURE
+		strayed-fates-forsaken-v2.0.0.2.jar               |STRAYED FATES: Forsaken       |strayed_fates_forsaken        |2.0.0.2             |Manifest: NOSIGNATURE
+		structure_pool_api-neoforge-1.2.1+1.21.1.jar      |Structure Pool API            |structure_pool_api            |1.2.1+1.21.1        |Manifest: NOSIGNATURE
+		structurize-1.0.822-1.21.1-snapshot.jar           |Structurize                   |structurize                   |1.0.822-1.21.1-snaps|Manifest: NOSIGNATURE
+		stylecolonies-1.15.51-1.21.1.jar                  |Stylecolonies                 |stylecolonies                 |1.15.51-1.21.1      |Manifest: NOSIGNATURE
+		supermartijn642configlib-1.1.8-neoforge-mc1.21.jar|SuperMartijn642's Config Libra|supermartijn642configlib      |1.1.8               |Manifest: NOSIGNATURE
+		supermartijn642corelib-1.1.21-neoforge-mc1.21.jar |SuperMartijn642's Core Lib    |supermartijn642corelib        |1.1.21              |Manifest: NOSIGNATURE
+		SOB-NeoForge-1.21.1-1.0.0.jar                     |SuperOreBlock                 |super_ore_block               |1.0.0               |Manifest: NOSIGNATURE
+		supplementaries-1.21-3.5.34-neoforge.jar          |Supplementaries               |supplementaries               |1.21-3.5.34         |Manifest: NOSIGNATURE
+		TerraBlender-neoforge-1.21.1-4.1.0.8.jar          |TerraBlender                  |terrablender                  |4.1.0.8             |Manifest: NOSIGNATURE
+		the_bumblezone-7.13.1+1.21.1-neoforge.jar         |The Bumblezone                |the_bumblezone                |7.13.1+1.21.1-neofor|Manifest: NOSIGNATURE
+		ThirstWasTaken-1.21.1-2.1.5.jar                   |Thirst Was Taken              |thirst                        |1.21.1-2.1.5        |Manifest: NOSIGNATURE
+		titanium-1.21-4.0.42.jar                          |Titanium                      |titanium                      |4.0.42              |Manifest: NOSIGNATURE
+		toms_storage-1.21-2.3.1.jar                       |Tom's Simple Storage Mod      |toms_storage                  |2.3.1               |Manifest: NOSIGNATURE
+		t_and_t-neoforge-fabric-1.13.7+1.21.1.jar         |Towns and Towers              |t_and_t                       |1.13.7              |Manifest: NOSIGNATURE
+		towntalk-1.2.0.jar                                |Towntalk                      |towntalk                      |1.2.0               |Manifest: NOSIGNATURE
+		trashcans-1.0.18c-neoforge-mc1.21.jar             |Trash Cans                    |trashcans                     |1.0.18+c            |Manifest: NOSIGNATURE
+		trotting_wagons-21.0.2.jar                        |Trotting Wagons               |trotting_wagons               |21.0.2              |Manifest: NOSIGNATURE
+		MineColonies_Tweaks-1.21.1-3.28.jar               |Tweaks addon for MineColonies |minecolonies_tweaks           |3.28                |Manifest: NOSIGNATURE
+		blockui-1.0.211-1.21.1-snapshot.jar               |UI Library Mod                |blockui                       |1.0.211-1.21.1-snaps|Manifest: NOSIGNATURE
+		valhelsia_core-neoforge-1.21-1.1.2.jar            |Valhelsia Core                |valhelsia_core                |1.1.2               |Manifest: NOSIGNATURE
+		valhelsia_structures-neoforge-1.21.1-1.1.2.jar    |Valhelsia Structures          |valhelsia_structures          |1.1.2               |Manifest: NOSIGNATURE
+		YungsApi-1.21.1-NeoForge-5.1.6.jar                |YUNG's API                    |yungsapi                      |1.21.1-NeoForge-5.1.|Manifest: NOSIGNATURE
+		YungsBetterCaves-1.21.1-NeoForge-3.1.4.jar        |YUNG's Better Caves           |bettercaves                   |1.21.1-NeoForge-3.1.|Manifest: NOSIGNATURE
+		ZeroCore2-1.21.1-2.4.21.jar                       |Zero CORE 2                   |zerocore                      |1.21.1-2.4.21       |Manifest: NOSIGNATURE
+		Zeta-1.1-39.jar                                   |Zeta                          |zeta                          |1.1-39              |Manifest: NOSIGNATURE
+	Crash Report UUID: 4477f8aa-f333-49f3-a409-ab486738a687
+	FML: 4.0.42
+	NeoForge: 21.1.224

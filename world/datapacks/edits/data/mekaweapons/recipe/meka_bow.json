@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PBP",
+    "LEL",
+    "ASA"
+  ],
+  "key": {
+    "P": { "item": "mekanism:pellet_polonium" },
+    "B": { "item": "mekaweapons:bow_riser" },
+    "E": { "item": "mekanism:elite_induction_cell" },
+    "A": { "item": "mekanism:pellet_antimatter" },
+    "S": { "item": "mekaweapons:bow_limb" },
+    "L": { "tag": "c:ingots/steel" }
+  },
+  "result": {
+    "id": "mekaweapons:meka_bow",
+    "count": 1
+  }
+}

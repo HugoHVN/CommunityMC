@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LSL",
+    "SCS",
+    "LSL"
+  ],
+  "key": {
+    "C": { "item": "mekanism:steel_casing" },
+    "L": { "tag": "c:dusts/lithium" },
+    "S": { "tag": "c:ingots/steel" }
+  },
+  "result": {
+    "id": "mekanismgenerators:fission_reactor_casing",
+    "count": 4
+  }
+}

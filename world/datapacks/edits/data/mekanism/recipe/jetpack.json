@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SCS",
+    "IEI",
+    "ALA"
+  ],
+  "key": {
+    "C": { "tag": "c:circuits/ultimate" },
+    "A": { "item": "mekanism:alloy_atomic" },
+    "I": { "tag": "c:ingots/tin" },
+    "S": { "tag": "c:ingots/steel" },
+    "L": { "tag": "c:dusts/lithium" },
+    "E": { "item": "minecraft:elytra" }
+  },
+  "result": {
+    "id": "mekanism:jetpack",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PAP",
+    "PAP",
+    "ICI"
+  ],
+  "key": {
+    "C": { "tag": "c:circuits/advanced" },
+    "P": { "item": "mekanismgenerators:solar_generator" },
+    "A": { "item": "mekanism:alloy_infused" },
+    "I": { "item": "minecraft:iron_ingot" }
+  },
+  "result": {
+    "id": "mekanismgenerators:advanced_solar_generator",
+    "count": 1
+  }
+}

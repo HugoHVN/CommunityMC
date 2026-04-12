@@ -1,0 +1,82 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 2026-04-10 22:14:57
+Description: Mod loading failures have occurred; consult the issue messages for more details
+
+net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Mod loading issue for: ohthetreesyoullgrow --
+Details:
+	Mod file: /data/mods/ohthetreesyoullgrow-neoforge-26.1-10.0.1.jar
+	Failure message: Mod ohthetreesyoullgrow requires minecraft 26.1 or above
+		Currently, minecraft is 1.21.1
+		
+	Mod version: 10.0.1
+	Mod issues URL: https://github.com/CorgiTaco/Oh-The-Trees-Youll-Grow/issues
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: ohthetreesyoullgrow --
+Details:
+	Mod file: /data/mods/ohthetreesyoullgrow-neoforge-26.1-10.0.1.jar
+	Failure message: Mod ohthetreesyoullgrow requires neoforge 26.1 or above
+		Currently, neoforge is 21.1.224
+		
+	Mod version: 10.0.1
+	Mod issues URL: https://github.com/CorgiTaco/Oh-The-Trees-Youll-Grow/issues
+	Exception message: <No associated exception found>
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Linux (amd64) version 6.12.33-production+truenas
+	Java Version: 21.0.10, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 685793744 bytes (654 MiB) / 1073741824 bytes (1024 MiB) up to 1073741824 bytes (1024 MiB)
+	CPUs: 2
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz
+	Identifier: Intel64 Family 6 Model 158 Stepping 10
+	Microarchitecture: Coffee Lake
+	Frequency (GHz): 3.70
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MiB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 15972.23
+	Virtual memory used (MiB): 22371.11
+	Swap memory total (MiB): 0.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 137219.25, total: 231516.25
+	Space in storage for workdir (MiB): available: 137219.25, total: 137888.50
+	JVM Flags: 2 total; -Xmx1G -Xms1G
+	ModLauncher: 11.0.5+main.901c6ea8
+	ModLauncher launch target: forgeserver
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.42.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.42.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.42.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.5.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		kotlinforforge@5.11.0
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		server-1.21.1-20240808.144430-srg.jar             |Minecraft                     |minecraft                     |1.21.1              |Manifest: NOSIGNATURE
+		neoforge-21.1.224-universal.jar                   |NeoForge                      |neoforge                      |21.1.224            |Manifest: NOSIGNATURE
