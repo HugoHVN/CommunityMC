@@ -1,0 +1,35 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:honeycomb",
+          "weight": 745
+        },
+        {
+          "type": "minecraft:item",
+          "name": "the_bumblezone:bee_stinger",
+          "weight": 250
+        },
+        {
+            "type": "minecraft:item",
+            "name": "productivebees:spawn_egg_configurable_bee",
+            "weight": 5,
+            "functions": [
+                {
+                    "function": "set_components",
+                    "components": {
+                        "minecraft:entity_data": {
+                            "type": "productivebees:experience",
+                            "id": "productivebees:configurable_bee"
+                        }
+                    }
+                }
+            ]
+        }
+      ]
+    }
+  ]
+}

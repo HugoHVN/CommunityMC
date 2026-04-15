@@ -1,0 +1,63 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 1000,
+      "fluid": "minecraft:lava"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "type": "productivebees:component",
+      "items": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+            "minecraft:entity_data": {
+                "type": "productivebees:coal",
+                "id": "productivebees:configurable_bee"
+            }
+        }
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+          "minecraft:entity_data": {
+              "type": "productivebees:blazing",
+              "id": "productivebees:configurable_bee"
+          }
+      }
+    }
+  ],
+  "neoforge:conditions": [
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:blazing"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "superheated",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 500,
+      "fluid": "minecraft:water"
+    },
+    {
+        "item": "ae2:fluix_crystal"
+    },
+    {
+        "item": "ae2:fluix_crystal"
+    },
+    {
+        "item": "ae2:fluix_crystal"
+    },
+    {
+        "item": "ae2:fluix_dust"
+    },
+    {
+        "item": "ae2:fluix_dust"
+    },
+    {
+        "item": "ae2:fluix_pearl"
+    },
+    {
+        "item": "minecraft:gunpowder"
+    },
+    {
+        "item": "minecraft:gunpowder"
+    },
+    {
+      "type": "productivebees:component",
+      "items": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+            "minecraft:entity_data": {
+                "type": "productivebees:spacial",
+                "id": "productivebees:configurable_bee"
+            }
+        }
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+          "minecraft:entity_data": {
+              "type": "productivebees:fluix",
+              "id": "productivebees:configurable_bee"
+          }
+      }
+    }
+  ],
+  "neoforge:conditions": [
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:fluix"
+        }
+    ]
+}

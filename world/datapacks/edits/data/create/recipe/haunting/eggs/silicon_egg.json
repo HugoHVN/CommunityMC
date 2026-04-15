@@ -1,0 +1,27 @@
+{
+    "type": "create:haunting",
+    "ingredients": [
+        {
+            "type": "productivebees:component",
+            "items": "productivebees:spawn_egg_configurable_bee",
+            "components": {
+                    "minecraft:entity_data": {
+                        "type": "productivebees:crystalline",
+                        "id": "productivebees:configurable_bee"
+                    }
+                }
+        }
+    ],
+    "results": [
+        {
+            "id": "productivebees:spawn_egg_configurable_bee",
+            "components": {
+                "minecraft:entity_data": {
+                    "type": "productivebees:silicon",
+                    "id": "productivebees:configurable_bee"
+                }
+            },
+            "chance": 0.75
+        }
+    ]
+}

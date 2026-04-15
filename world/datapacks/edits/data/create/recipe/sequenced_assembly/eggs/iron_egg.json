@@ -1,0 +1,101 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "productivebees:spawn_egg_ashy_mining_bee"
+  },
+  "loops": 3,
+  "results": [
+    {
+      "chance": 37.5,
+      "id": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+          "minecraft:entity_data": {
+              "type": "productivebees:iron",
+              "id": "productivebees:configurable_bee"
+          }
+      }
+    },
+    {
+      "chance": 16.0,
+      "id": "minecraft:iron_ingot",
+      "count": 6
+    },
+    {
+      "chance": 16.0,
+      "id": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+          "minecraft:entity_data": {
+              "type": "productivebees:copper",
+              "id": "productivebees:configurable_bee"
+          }
+      }
+    },
+    {
+      "chance": 3.0,
+      "id": "minecraft:gold_nugget",
+      "count": 3
+    },
+    {
+      "chance": 2.0,
+      "id": "create:crushed_raw_gold",
+      "count": 5
+    },
+    {
+      "id": "create:crushed_raw_iron",
+      "count": 7
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "productivebees:spawn_egg_ashy_mining_bee"
+        },
+        {
+          "item": "minecraft:iron_nugget"
+        }
+      ],
+      "results": [
+        {
+          "id": "productivebees:spawn_egg_ashy_mining_bee"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "productivebees:spawn_egg_ashy_mining_bee"
+        },
+        {
+          "item": "minecraft:coal"
+        }
+      ],
+      "results": [
+        {
+          "id": "productivebees:spawn_egg_ashy_mining_bee"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "productivebees:spawn_egg_ashy_mining_bee"
+        },
+        {
+          "item": "minecraft:iron_block"
+        }
+      ],
+      "results": [
+        {
+          "id": "productivebees:spawn_egg_ashy_mining_bee"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "productivebees:spawn_egg_ashy_mining_bee"
+  }
+}

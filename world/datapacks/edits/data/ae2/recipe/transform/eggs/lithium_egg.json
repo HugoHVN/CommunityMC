@@ -1,0 +1,29 @@
+{
+  "type": "ae2:transform",
+  "circumstance": {
+    "type": "fluid",
+    "tag": "mekanism:lithium"
+  },
+  "ingredients": [
+    {
+      "type": "productivebees:component",
+      "items": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+            "minecraft:entity_data": {
+                "type": "productivebees:water",
+                "id": "productivebees:configurable_bee"
+            }
+        }
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+          "minecraft:entity_data": {
+              "type": "productivebees:lithium",
+              "id": "productivebees:configurable_bee"
+          }
+      }
+  }
+}

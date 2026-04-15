@@ -1,0 +1,43 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "superheated",
+  "ingredients": [
+    {
+        "tag": "c:storage_blocks/copper"
+    },
+    {
+        "tag": "c:storage_blocks/copper"
+    },
+    {
+        "tag": "c:storage_blocks/copper"
+    },
+    {
+      "type": "productivebees:component",
+      "items": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+            "minecraft:entity_data": {
+                "type": "productivebees:tin",
+                "id": "productivebees:configurable_bee"
+            }
+        }
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+          "minecraft:entity_data": {
+              "type": "productivebees:sky_bronze",
+              "id": "productivebees:configurable_bee"
+          }
+      }
+    }
+  ],
+  "neoforge:conditions": [
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:sky_bronze"
+        }
+    ]
+}

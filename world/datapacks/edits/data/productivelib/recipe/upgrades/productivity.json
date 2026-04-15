@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CHC",
+    "BUB",
+    "CHC"
+  ],
+  "key": {
+    "C": { "tag": "c:storage_blocks/honeycombs" },
+    "U": { "item": "productivelib:upgrade_base" },
+    "B": { "item": "minecraft:dragon_breath" },
+    "H": { "item": "minecraft:honey_block" }
+  },
+  "result": {
+    "id": "productivelib:upgrade_productivity",
+    "count": 1
+  }
+}

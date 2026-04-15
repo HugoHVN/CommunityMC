@@ -1,0 +1,46 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "superheated",
+  "ingredients": [
+    {
+        "item": "megacells:sky_steel_block"
+    },
+    {
+        "item": "megacells:sky_steel_block"
+    },
+    {
+        "item": "megacells:sky_steel_block"
+    },
+    {
+        "item": "minecraft:coal_block"
+    },
+    {
+      "type": "productivebees:component",
+      "items": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+            "minecraft:entity_data": {
+                "type": "productivebees:iron",
+                "id": "productivebees:configurable_bee"
+            }
+        }
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+          "minecraft:entity_data": {
+              "type": "productivebees:sky_steel",
+              "id": "productivebees:configurable_bee"
+          }
+      }
+    }
+  ],
+  "neoforge:conditions": [
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:sky_steel"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BHB",
+    "FUF",
+    "BHB"
+  ],
+  "key": {
+    "F": { "item": "minecraft:item_frame" },
+    "U": { "item": "productivelib:upgrade_productivity_2" },
+    "B": { "item": "minecraft:dragon_breath" },
+    "H": { "item": "productivebees:wax_block" }
+  },
+  "result": {
+    "id": "productivelib:upgrade_block",
+    "count": 1
+  }
+}

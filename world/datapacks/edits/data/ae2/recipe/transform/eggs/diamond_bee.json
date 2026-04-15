@@ -1,0 +1,43 @@
+{
+  "type": "ae2:transform",
+  "circumstance": {
+    "type": "explosion"
+  },
+  "ingredients": [
+    {
+      "type": "productivebees:component",
+      "items": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+            "minecraft:entity_data": {
+                "type": "productivebees:coal",
+                "id": "productivebees:configurable_bee"
+            }
+        }
+    },
+    {
+        "item": "productivebees:spawn_egg_creeper_bee"
+    },
+    {
+        "item": "minecraft:diamond_block"
+    },
+    {
+        "item": "minecraft:diamond_block"
+    },
+    {
+        "item": "minecraft:diamond_block"
+    },
+    {
+      "tag": "c:dusts/ender_pearl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "productivebees:spawn_egg_configurable_bee",
+    "components": {
+        "minecraft:entity_data": {
+            "type": "productivebees:diamond",
+            "id": "productivebees:configurable_bee"
+        }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "type": "mekanism:reaction",
+  "chemical_input": {
+    "amount": 250,
+    "chemical": "mekanism:nuclear_waste"
+  },
+  "duration": 750,
+  "energy_required": 1000,
+  "fluid_input": {
+    "amount": 500,
+    "tag": "c:lithium"
+  },
+  "item_input": {
+    "count": 1,
+    "type": "productivebees:component",
+    "items": "productivebees:spawn_egg_configurable_bee",
+    "components": {
+        "minecraft:entity_data": {
+            "type": "productivebees:water",
+            "id": "productivebees:configurable_bee"
+        }
+    }
+  },
+  "item_output": {
+    "count": 1,
+    "id": "productivebees:spawn_egg_configurable_bee",
+    "components": {
+        "minecraft:entity_data": {
+            "type": "productivebees:radioactive",
+            "id": "productivebees:configurable_bee"
+        }
+    }
+  }
+}

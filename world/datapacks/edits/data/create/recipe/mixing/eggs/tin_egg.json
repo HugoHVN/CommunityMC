@@ -1,0 +1,46 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "productivebees:component",
+      "items": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+            "minecraft:entity_data": {
+                "type": "productivebees:copper",
+                "id": "productivebees:configurable_bee"
+            }
+        }
+    },
+    {
+        "tag": "c:storage_blocks/tin"
+    },
+    {
+        "tag": "c:storage_blocks/tin"
+    },
+    {
+        "tag": "c:storage_blocks/tin"
+    },
+    {
+        "item": "minecraft:diorite"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+          "minecraft:entity_data": {
+              "type": "productivebees:tin",
+              "id": "productivebees:configurable_bee"
+          }
+      }
+    }
+  ],
+  "neoforge:conditions": [
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:tin"
+        }
+    ]
+}

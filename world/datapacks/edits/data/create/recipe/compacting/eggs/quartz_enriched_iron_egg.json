@@ -1,0 +1,36 @@
+{
+  "type": "create:compacting",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+        "tag": "c:storage_blocks/iron"
+    },
+    {
+        "tag": "c:storage_blocks/iron"
+    },
+    {
+        "tag": "c:storage_blocks/iron"
+    },
+    {
+      "type": "productivebees:component",
+      "items": "productivebees:spawn_egg_configurable_bee",
+      "components": {
+            "minecraft:entity_data": {
+                "type": "productivebees:crystalline",
+                "id": "productivebees:configurable_bee"
+            }
+        }
+    }
+  ],
+  "results": [
+    {
+        "id": "productivebees:spawn_egg_configurable_bee",
+        "components": {
+            "minecraft:entity_data": {
+                "type": "productivebees:quartz_enriched_iron",
+                "id": "productivebees:configurable_bee"
+            }
+        }
+    }
+  ]
+}
