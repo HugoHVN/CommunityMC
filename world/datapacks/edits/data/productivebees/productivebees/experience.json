@@ -1,0 +1,8 @@
+{
+  "primaryColor": "#00fc1a",
+  "secondaryColor": "#884739",
+  "particleColor": "#00fc1a",
+  "selfbreed": false,
+  "description": "To acquire this bee, its spawn egg has a chance to be dropped by regular bees",
+  "flowerTag": "c:bookshelves"
+}

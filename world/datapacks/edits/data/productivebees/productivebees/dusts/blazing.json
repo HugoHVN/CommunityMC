@@ -1,0 +1,11 @@
+{
+  "primaryColor": "#fcd979",
+  "particleColor": "#fcd979",
+  "particleType": "lava",
+  "flowerTag": "productivebees:flowers/fiery",
+  "beeTexture": "productivebees:textures/entity/bee/blazing/bee",
+  "attackResponse": "fire",
+  "selfbreed": false,
+  "description": "To acquire this bee, look up the crafting recipe for its spawn egg",
+  "fireproof": true
+}

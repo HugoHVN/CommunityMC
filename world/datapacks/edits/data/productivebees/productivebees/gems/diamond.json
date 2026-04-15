@@ -1,0 +1,14 @@
+{
+  "primaryColor": "#3ddfe1",
+  "secondaryColor": "#804f40",
+  "tertiaryColor": "#0ebabd",
+  "particleColor": "#3ddfe1",
+  "flowerTag": "productivebees:flowers/diamond",
+  "size": 0.6,
+  "renderer": "default_crystal",
+  "selfbreed": false,
+  "description": "To acquire this bee, blow up 3 diamond blocks, a Coal bee and a CreeBee egg with Ender dust to craft its spawn egg",
+  "attributes": {
+    "endurance": "endurance.medium"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "primaryColor": "#ffffff",
+  "secondaryColor": "#228B22",
+  "particleColor": "#cccccc",
+  "flowerTag": "productivebees:flowers/frozen",
+  "waterproof": true,
+  "selfbreed": false,
+  "description": "This bee is only found when fishing is cold biomes",
+  "coldResistant": true
+}

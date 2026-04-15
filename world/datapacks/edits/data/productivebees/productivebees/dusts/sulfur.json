@@ -1,0 +1,18 @@
+{
+  "primaryColor": "#e4ff95",
+  "secondaryColor": "#c9ab4b",
+  "particleColor": "#f1f372",
+  "flowerTag": "productivebees:flowers/sulfur",
+  "renderer": "default_crystal",
+  "selfbreed": false,
+  "description": "To acquire this bee, look up the crafting recipe for its spawn egg",
+  "conditions": [
+    {
+      "value": {
+        "tag": "c:dusts/sulfur",
+        "type": "neoforge:tag_empty"
+      },
+      "type": "neoforge:not"
+    }
+  ]
+}

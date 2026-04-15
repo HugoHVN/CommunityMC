@@ -1,0 +1,11 @@
+{
+  "primaryColor": "#FCD979",
+  "secondaryColor": "#804f40",
+  "particleColor": "#fffd6e",
+  "flowerTag": "productivebees:flowers/gilded",
+  "selfbreed": false,
+  "description": "To acquire this bee, look up the crafting recipe for its spawn egg",
+  "attributes": {
+    "endurance": "endurance.weak"
+  }
+}

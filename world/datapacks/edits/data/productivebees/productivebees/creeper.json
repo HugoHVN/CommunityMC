@@ -1,0 +1,11 @@
+{
+  "primaryColor": "#196909",
+  "secondaryColor": "#804f40",
+  "particleColor": "#222525",
+  "flowerTag": "productivebees:flowers/powdery",
+  "beeTexture": "productivebees:textures/entity/bee/creeper/bee",
+  "selfbreed": false,
+  "description": "To acquire this bee, blow up a bee spawn egg with 3 Gunpowder, Ender dust for its spawn egg",
+  "createComb": false,
+  "size": 1
+}

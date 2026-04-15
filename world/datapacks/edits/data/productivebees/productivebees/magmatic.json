@@ -1,0 +1,20 @@
+{
+  "primaryColor": "#d06a1b",
+  "secondaryColor": "#100000",
+  "particleColor": "#d06a1b",
+  "particleType": "lava",
+  "flowerTag": "productivebees:flowers/magmatic",
+  "nestingPreference": "productivebees:nests/nether_brick_nests",
+  "beeTexture": "productivebees:textures/entity/bee/magmatic/bee",
+  "attackResponse": "lava",
+  "fireproof": true,
+  "selfbreed": false,
+  "description": "Can be found in the Nether, in places like or near a Fortress or the Forests",
+  "renderer": "translucent_with_center",
+  "passiveEffects": [
+    {
+      "effect": "minecraft:fire_resistance",
+      "duration": 400
+    }
+  ]
+}

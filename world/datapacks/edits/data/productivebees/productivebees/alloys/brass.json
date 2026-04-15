@@ -1,0 +1,19 @@
+{
+  "primaryColor": "#DAAA4C",
+  "secondaryColor": "#804f40",
+  "flowerTag": "c:storage_blocks/brass",
+  "selfbreed": false,
+  "conditions": [
+    {
+      "value": {
+        "tag": "c:storage_blocks/brass",
+        "type": "neoforge:tag_empty"
+      },
+      "type": "neoforge:not"
+    },
+    {
+        "modid": "no_mod_here",
+        "type": "neoforge:mod_loaded"
+    }
+  ]
+}

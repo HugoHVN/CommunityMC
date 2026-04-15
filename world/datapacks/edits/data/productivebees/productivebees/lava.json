@@ -1,0 +1,9 @@
+{
+  "primaryColor": "#d56c1a",
+  "secondaryColor": "#000000",
+  "flowerFluid": "minecraft:lava",
+  "beeTexture": "productivebees:textures/entity/bee/lava/bee",
+  "selfbreed": false,
+  "description": "To acquire this bee, look up the crafting recipe for its spawn egg or throw a Magmatic Bee Spawn Egg in Lava",
+  "fireproof": true
+}

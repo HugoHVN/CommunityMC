@@ -1,0 +1,16 @@
+{
+  "primaryColor": "#9ABDD6",
+  "secondaryColor": "#804f40",
+  "flowerTag": "c:storage_blocks/tin",
+  "selfbreed": false,
+  "description": "To acquire this bee, look up the crafting recipe for its spawn egg",
+  "conditions": [
+    {
+      "value": {
+        "tag": "c:storage_blocks/tin",
+        "type": "neoforge:tag_empty"
+      },
+      "type": "neoforge:not"
+    }
+  ]
+}

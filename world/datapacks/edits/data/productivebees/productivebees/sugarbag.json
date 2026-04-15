@@ -1,0 +1,21 @@
+{
+  "primaryColor": "#000000",
+  "secondaryColor": "#623875",
+  "particleColor": "#99bf02",
+  "flowerBlock": "minecraft:sugar_cane",
+  "nestingPreference": "productivebees:nests/sugarbag_nests",
+  "beeTexture": "productivebees:textures/entity/bee/sugarbag/bee",
+  "createComb": false,
+  "stingless": true,
+  "renderer": "tiny",
+  "selfbreed": false,
+  "attributes": {
+    "temper": "temper.passive"
+  },
+  "conditions": [
+    {
+        "modid": "no_mod_here",
+        "type": "neoforge:mod_loaded"
+    }
+  ]
+}

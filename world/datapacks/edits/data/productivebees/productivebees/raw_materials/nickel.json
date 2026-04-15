@@ -1,0 +1,16 @@
+{
+  "primaryColor": "#D8CC93",
+  "secondaryColor": "#804f40",
+  "selfbreed": false,
+  "flowerTag": "c:storage_blocks/nickel",
+  "description": "To acquire this bee, look up the crafting recipe for its spawn egg",
+  "conditions": [
+    {
+      "value": {
+        "tag": "c:storage_blocks/nickel",
+        "type": "neoforge:tag_empty"
+      },
+      "type": "neoforge:not"
+    }
+  ]
+}

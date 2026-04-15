@@ -1,0 +1,13 @@
+{
+   "primaryColor": "#2659ab",
+  "secondaryColor": "#804f40",
+  "tertiaryColor": "#1b3588",
+  "particleColor": "#3537bc",
+  "particleType": "pop",
+  "flowerTag": "c:storage_blocks/lapis",
+  "size": 0.8,
+  "selfbreed": false,
+  "useGlowLayer": false,
+  "description": "To acquire this bee, look up the crafting recipe for its spawn egg or throw a Experience Bee spawn egg in Liquid Blue Dye",
+  "renderer": "default_crystal"
+}

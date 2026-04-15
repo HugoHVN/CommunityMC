@@ -1,0 +1,18 @@
+{
+  "primaryColor": "#80B425",
+  "secondaryColor": "#bb8d23",
+  "particleColor": "#80B425",
+  "particleType": "pop",
+  "flowerItem": "mekanism:pellet_antimatter",
+  "irradiated": true,
+  "conditions": [
+    {
+      "modid": "mekanism",
+      "type": "neoforge:mod_loaded"
+    },
+    {
+        "modid": "no_mod_here",
+        "type": "neoforge:mod_loaded"
+    }
+  ]
+}
