@@ -1,0 +1,15 @@
+{
+  "type": "productivebees:bee_conversion",
+  "source": "productivebees:silky",
+  "result": "productivebees:slimy",
+  "item": {
+    "item": "minecraft:slime_block"
+  },
+  "chance": 0.25,
+  "neoforge:conditions": [
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:slimy"
+    }
+  ]
+}

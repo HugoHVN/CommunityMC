@@ -1,0 +1,18 @@
+{
+  "type": "productivebees:bee_conversion",
+  "source": "productivebees:sweat_bee",
+  "result": "productivebees:frosty",
+  "item": {
+    "tag": "productivebees:flowers/frozen"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "no_mod_here"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:frosty"
+    }
+  ]
+}

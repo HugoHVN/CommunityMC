@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "CEC",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:dragon_breath"
+    },
+    "E": {
+      "tag": "c:eggs"
+    }
+  },
+  "result": {
+    "id": "productivebees:inactive_dragon_egg"
+  }
+}

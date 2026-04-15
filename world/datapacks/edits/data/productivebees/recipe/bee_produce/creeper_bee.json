@@ -1,0 +1,18 @@
+{
+  "type": "productivebees:advanced_beehive",
+  "ingredient": "productivebees:creeper_bee",
+  "results": [
+    {
+      "item": {
+        "item": "productivebees:honeycomb_powdery"
+      },
+      "chance": 0.01
+    },
+    {
+      "item": {
+        "tag": "c:pollens"
+      },
+      "chance": 0.05
+    }
+  ]
+}
